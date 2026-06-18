@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>As One - A Cinematic Story of Love</title>
+  <meta name="description" content="An immersive, vertical-scrolling visual story of love, told through Makoto Shinkai-inspired art and procedural lofi piano music.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Style Link -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Loading / Enter Screen -->
+  <div id="loader" class="loader-container">
+    <div class="loader-content">
+      <p class="loader-overtitle">An Immersive Experience</p>
+      <h1 class="loader-title">As One</h1>
+      <p class="loader-subtitle">Please wear headphones for the best experience.</p>
+      <button id="enter-btn" class="enter-btn">
+        <span>Enter Story</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </button>
+    </div>
+    <div class="loader-bg"></div>
+  </div>
+
+  <!-- Scroll Progress Indicator (Top Bar) -->
+  <div class="progress-bar-container">
+    <div id="progress-bar" class="progress-bar"></div>
+  </div>
+
+  <!-- Fixed Header Elements -->
+  <header class="fixed-header">
+    <div class="logo">
+      <span class="logo-serif">As One</span>
+    </div>
+    
+    <!-- Audio Visualizer / Control Button -->
+    <button id="audio-toggle" class="audio-control" aria-label="Toggle Background Music">
+      <span class="audio-status-text">SOUND OFF</span>
+      <div class="visualizer-bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </button>
+  </header>
+
+  <!-- Side Navigation Dots -->
+  <nav class="side-nav" aria-label="Chapters">
+    <ul>
+      <li class="nav-dot-container active" data-target="chapter-1">
+        <span class="nav-label">The Scroll</span>
+        <button class="nav-dot" aria-label="Go to Chapter 1"></button>
+      </li>
+      <li class="nav-dot-container" data-target="chapter-2">
+        <span class="nav-label">The Routine</span>
+        <button class="nav-dot" aria-label="Go to Chapter 2"></button>
+      </li>
+      <li class="nav-dot-container" data-target="chapter-3">
+        <span class="nav-label">The Pursuit</span>
+        <button class="nav-dot" aria-label="Go to Chapter 3"></button>
+      </li>
+      <li class="nav-dot-container" data-target="chapter-4">
+        <span class="nav-label">The Silence</span>
+        <button class="nav-dot" aria-label="Go to Chapter 4"></button>
+      </li>
+      <li class="nav-dot-container" data-target="chapter-5">
+        <span class="nav-label">The Promise</span>
+        <button class="nav-dot" aria-label="Go to Chapter 5"></button>
+      </li>
+      <li class="nav-dot-container" data-target="chapter-6">
+        <span class="nav-label">As One</span>
+        <button class="nav-dot" aria-label="Go to Chapter 6"></button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Scroll Indicator (Bottom Center, shown on early chapters) -->
+  <div id="scroll-prompt" class="scroll-prompt">
+    <span class="prompt-text">Scroll to progress</span>
+    <div class="scroll-arrow">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Fixed Footer -->
+  <footer class="fixed-footer">
+    <span>with love @avrxt</span>
+  </footer>
+
+  <!-- Main Scroll Snapping Container -->
+  <main id="scroll-container" class="scroll-container">
+    
+    <!-- Chapter 1: The Scroll -->
+    <section class="story-section active" id="chapter-1" data-index="0">
+      <div class="bg-container">
+        <div class="bg-image bg-chapter-1"></div>
+        <div class="bg-scrim"></div>
+      </div>
+      <div class="content-wrapper align-mid-left">
+        <div class="text-block">
+          <span class="story-meta">STORY LOG // INSTAGRAM 2024</span>
+          <span class="over-title">Chapter I</span>
+          <h2 class="main-title">The Scroll</h2>
+          <p class="subtitle">A simple feed, a lifetime found</p>
+          <p class="story-paragraph">It was 2024. A casual scroll through Instagram, a picture, a name. I clicked message. I didn't know it then, but my universe had just shifted.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 2: The Routine -->
+    <section class="story-section" id="chapter-2" data-index="1">
+      <div class="bg-container">
+        <div class="bg-image bg-chapter-2"></div>
+        <div class="bg-scrim"></div>
+      </div>
+      <div class="content-wrapper align-mid-right">
+        <div class="text-block">
+          <span class="story-meta">DAILY LOG // TEA & MORNING CHORDS</span>
+          <span class="over-title">Chapter II</span>
+          <h2 class="main-title">The Routine</h2>
+          <p class="subtitle">Good morning, tea, and you</p>
+          <p class="story-paragraph">Soon, you became my daily pattern. Morning texts, tea checks, and afternoon greetings. The exact same pattern, day after day, until you were my entire routine.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 3: The Pursuit -->
+    <section class="story-section" id="chapter-3" data-index="2">
+      <div class="bg-container">
+        <div class="bg-image bg-chapter-3"></div>
+        <div class="bg-scrim"></div>
+      </div>
+      <div class="content-wrapper align-bottom-left">
+        <div class="text-block">
+          <span class="story-meta">WAITING // LAMP LIGHT & PERSISTENCE</span>
+          <span class="over-title">Chapter III</span>
+          <h2 class="main-title">The Pursuit</h2>
+          <p class="subtitle">Rejected twice, accepted once</p>
+          <p class="story-paragraph">I proposed, and you said no. I tried again, and you rejected me. But love is persistent. I asked once more, and you accepted—initially, a simple escape, but soon, something far deeper.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 4: The Silence -->
+    <section class="story-section" id="chapter-4" data-index="3">
+      <div class="bg-container">
+        <div class="bg-image bg-chapter-4"></div>
+        <div class="bg-scrim"></div>
+      </div>
+      <div class="content-wrapper align-top-right">
+        <div class="text-block">
+          <span class="story-meta">THE GAP // INSTAGRAM STORY & MESSAGE</span>
+          <span class="over-title">Chapter IV</span>
+          <h2 class="main-title">The Silence</h2>
+          <p class="subtitle">A month of learning value</p>
+          <p class="story-paragraph">Then came a month of silence. A painful break where I truly learned your value in my life. I missed you every day. A mention in a story, a message sent in hope, and our threads slowly wove back together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 5: The Promise -->
+    <section class="story-section" id="chapter-5" data-index="4">
+      <div class="bg-container">
+        <div class="bg-image bg-chapter-5"></div>
+        <div class="bg-scrim"></div>
+      </div>
+      <div class="content-wrapper align-mid-left">
+        <div class="text-block">
+          <span class="story-meta">THE SHIFT // YOUR PROPOSAL</span>
+          <span class="over-title">Chapter V</span>
+          <h2 class="main-title">The Promise</h2>
+          <p class="subtitle">You said the words</p>
+          <p class="story-paragraph">We rebuilt our communication. And then, the unexpected happened—this time, you proposed to me. We gathered our pieces and rebuilt everything, stronger than before.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 6: As One -->
+    <section class="story-section" id="chapter-6" data-index="5">
+      <div class="bg-container">
+        <div class="bg-image bg-chapter-6"></div>
+        <div class="bg-scrim"></div>
+      </div>
+      <div class="content-wrapper align-center-center">
+        <div class="text-block text-center">
+          <span class="story-meta">ANNIVERSARY // MY ETERNAL BIRTHDAY GIFT</span>
+          <span class="over-title">Chapter VI</span>
+          <h2 class="main-title font-highlight">As One</h2>
+          <p class="subtitle">One year completed. My birthday, and you</p>
+          <p class="story-paragraph">Over a year completed, and today is my birthday. You are the best gift I could ever have. I can't live without you. You are my baby, my mother, my everything. Always love you, Sivahhhh.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Script Loading -->
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
